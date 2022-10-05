@@ -1,0 +1,39 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 40px;
+    justify-content: center;
+}
+
+.modal_delete {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal_delete .cancel, .modal_delete .confirm {
+    font-size: 25px;
+    padding: 20px 40px;
+    border-style: none;
+    border-radius: 20px;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.modal_delete .cancel {
+    background: var(--main-dark-blue);
+}
+
+.modal_delete .cancel:hover {
+    box-shadow: var(--main-dark-blue) 0 1px 30px;
+    transition-duration: .1s;
+}
+
+.modal_delete .confirm {
+    background: red;
+}
+
+.modal_delete .confirm:hover {
+    box-shadow: red 0 1px 30px;
+    transition-duration: .1s;
+}

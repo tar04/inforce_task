@@ -3,3 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --main-dark-blue: #232535;
+  --main-blue: #2A3141;
+  --main-gray: #37394A;
+  --main-light-blue: #646ECC;
+  --text-primary: snow;
+  --text-secondary: #72778E;
+}

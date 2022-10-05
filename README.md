@@ -13,7 +13,7 @@ You may also see any lint errors in the console.
 ### `npm run start:server`
 
 Launches the database in watch mode.\
-You can see raw data following the link. [Products](http://localhost:4000/products)
-and [Comments](http://localhost:4000/comments)
+You can see raw data following the link: [Products](http://localhost:4000/products)
+
 
 

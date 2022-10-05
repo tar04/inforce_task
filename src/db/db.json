@@ -1,0 +1,141 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "imageUrl": "/images/tomato.png",
+      "name": "Tomato",
+      "count": 7,
+      "size": {
+        "width": 7,
+        "height": 5
+      },
+      "weight": "155g",
+      "comments": [
+        {
+          "id": 1,
+          "productId": 1,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
+          "date": "14:06 01.04.2022"
+        },
+        {
+          "id": 5,
+          "productId": 1,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
+          "date": "22:10 22.03.2022"
+        },
+        {
+          "id": 6,
+          "productId": 1,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
+          "date": "11:00 14.06.2022"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "imageUrl": "/images/watermelon.png",
+      "name": "Watermelon",
+      "count": 12,
+      "size": {
+        "width": 24,
+        "height": 40
+      },
+      "weight": "11kg",
+      "comments": [
+        {
+          "id": 2,
+          "productId": 2,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
+          "date": "16:45 14.05.2021"
+        },
+        {
+          "id": 3,
+          "productId": 2,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
+          "date": "11:00 01.01.2022"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "imageUrl": "/images/peach.png",
+      "name": "Peach",
+      "count": 3,
+      "size": {
+        "width": 9,
+        "height": 6
+      },
+      "weight": "200g",
+      "comments": [
+        {
+          "id": 8,
+          "productId": 3,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
+          "date": "18:00 03.07.2022"
+        },
+        {
+          "id": 9,
+          "productId": 3,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
+          "date": "20:30 12.07.2022"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "imageUrl": "/images/apple.png",
+      "name": "Apple",
+      "count": 22,
+      "size": {
+        "width": 8,
+        "height": 7
+      },
+      "weight": "150g",
+      "comments": [
+        {
+          "id": 4,
+          "productId": 4,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
+          "date": "08:55 11.04.2022"
+        },
+        {
+          "id": 11,
+          "productId": 4,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
+          "date": "15:11 17.05.2022"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "imageUrl": "/images/cabbage.png",
+      "name": "Cabbage",
+      "count": 1,
+      "size": {
+        "width": 17,
+        "height": 20
+      },
+      "weight": "800g",
+      "comments": [
+        {
+          "id": 7,
+          "productId": 5,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
+          "date": "18:20 30.07.2022"
+        },
+        {
+          "id": 10,
+          "productId": 5,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
+          "date": "09:46 03.08.2022"
+        },
+        {
+          "id": 12,
+          "productId": 5,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
+          "date": "16:21 21.08.2022"
+        }
+      ]
+    }
+  ]
+}

@@ -10,14 +10,25 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "axios": "^0.25.0",
+    "joi": "^17.6.0",
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1",
+    "react-redux": "^7.2.6",
+    "@reduxjs/toolkit": "^1.7.2",
+    "@hookform/resolvers": "^2.8.8",
+    "react-hook-form": "^7.27.0"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^17.0.11",
+    "@types/react-router-dom": "^5.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start:server": "json-server -p 4000 -w db/db.json -s ./node_modules/json-server/public"
+    "start:server": "json-server -p 4000 -w src/db/db.json -s ./node_modules/json-server/public"
   },
   "eslintConfig": {
     "extends": [
