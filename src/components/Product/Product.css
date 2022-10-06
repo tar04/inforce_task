@@ -37,7 +37,7 @@
 
 .bottom_menu > button {
     width: fit-content;
-    background-image: linear-gradient(92deg, #455EB5 10%, #5643CC 45%, #673FD7 65%);
+    background-image: linear-gradient(var(--text-primary) , var(--text-secondary) 60%);
     border-radius: 40px;
     border-style: none;
     height: 3rem;

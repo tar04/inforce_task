@@ -1,12 +1,12 @@
 import React from "react";
 
-import {Products} from "../../components";
+import {Products, Menu} from "../../components";
 import "./ProductsPage.css";
 
 const ProductsPage = () => {
     return (
         <div className="products_page">
-            {/*todo sort + arr button*/}
+            <Menu/>
             <Products/>
         </div>
     );

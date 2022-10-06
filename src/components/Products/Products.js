@@ -8,19 +8,26 @@ import "./Products.css";
 
 const Products = () => {
 
-    const {products, status, error} = useSelector(state => state["productReducer"]);
+    let {sortType, products, status, error} = useSelector(state => state["productReducer"]);
 
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(productActions.getAllProducts())
-    }, [])
+        dispatch(productActions.getAllProducts());
+        dispatch(productActions.setSortType("alphabet"));
+    }, []);
+
+    useEffect(() => {
+        dispatch(productActions.sortProducts());
+    }, [sortType]);
 
     const [modalActive, setModalActive] = useState(false);
 
+    const [idForDelete, setIdForDelete] = useState(null);
+
     function deleteProduct() {
         setModalActive(false);
-        // dispatch(productActions)
+        dispatch(productActions.deleteProductById({idForDelete}))
     }
 
     return (
@@ -28,7 +35,8 @@ const Products = () => {
             {status === "pending" && <h2> Loading...</h2>}
             {error && <h2>{error}. Try again later</h2>}
             <div className="products">
-                {products.map(product => <Product key={product.id} product={product} setModalActive={setModalActive}/>)}
+                {products.map(product => <Product key={product.id} product={product} setModalActive={setModalActive}
+                                                  setIdForDelete={setIdForDelete}/>)}
             </div>
             <Modal modalActive={modalActive} setModalActive={setModalActive}>
                 <div className="modal_delete">

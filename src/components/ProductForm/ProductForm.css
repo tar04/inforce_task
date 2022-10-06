@@ -1,0 +1,71 @@
+.product_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    row-gap: 25px;
+    font-size: 20px;
+}
+
+.product_form > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form_inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.form_inputs > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form_inputs > div input {
+    width: 14vw;
+    border-style: none;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 20px;
+    color: var(--text-secondary);
+
+}
+
+.form_buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 15%;
+    align-items: center;
+}
+
+.form_buttons button {
+    font-size: 25px;
+    padding: 10px 20px;
+    border-style: none;
+    border-radius: 20px;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.form_button_cancel {
+    background: var(--main-dark-blue);
+}
+
+.form_button_cancel:hover {
+    box-shadow: var(--main-dark-blue) 0 1px 30px;
+    transition-duration: .1s;
+}
+
+.form_button_ok {
+    background: var(--main-light-blue);
+}
+
+.form_button_ok:hover {
+    box-shadow: var(--main-light-blue) 0 1px 30px;
+    transition-duration: .1s;
+}

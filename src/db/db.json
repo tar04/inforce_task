@@ -1,13 +1,12 @@
 {
   "products": [
     {
-      "id": 1,
-      "imageUrl": "/images/tomato.png",
+      "imageUrl": "tomato.png",
       "name": "Tomato",
-      "count": 7,
+      "count": 1,
       "size": {
-        "width": 7,
-        "height": 5
+        "height": 5,
+        "width": 7
       },
       "weight": "155g",
       "comments": [
@@ -29,18 +28,19 @@
           "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
           "date": "11:00 14.06.2022"
         }
-      ]
+      ],
+      "id": 1
     },
     {
       "id": 2,
-      "imageUrl": "/images/watermelon.png",
+      "imageUrl": "watermelon.png",
       "name": "Watermelon",
       "count": 12,
       "size": {
         "width": 24,
         "height": 40
       },
-      "weight": "11kg",
+      "weight": "1100g",
       "comments": [
         {
           "id": 2,
@@ -58,7 +58,7 @@
     },
     {
       "id": 3,
-      "imageUrl": "/images/peach.png",
+      "imageUrl": "peach.png",
       "name": "Peach",
       "count": 3,
       "size": {
@@ -83,7 +83,7 @@
     },
     {
       "id": 4,
-      "imageUrl": "/images/apple.png",
+      "imageUrl": "apple.png",
       "name": "Apple",
       "count": 22,
       "size": {
@@ -107,13 +107,12 @@
       ]
     },
     {
-      "id": 5,
-      "imageUrl": "/images/cabbage.png",
+      "imageUrl": "cabbage.png",
       "name": "Cabbage",
-      "count": 1,
+      "count": 2,
       "size": {
-        "width": 17,
-        "height": 20
+        "height": 20,
+        "width": 17
       },
       "weight": "800g",
       "comments": [
@@ -135,7 +134,8 @@
           "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aut culpa esse excepturi, molestias non provident quasi quidem saepe!",
           "date": "16:21 21.08.2022"
         }
-      ]
+      ],
+      "id": 5
     }
   ]
 }

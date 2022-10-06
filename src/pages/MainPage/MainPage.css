@@ -1,6 +1,5 @@
 .main {
     background-color: var(--main-dark-blue);
-    /*background-image: linear-gradient(var(--main-light-blue) 5%, #673FD7 25%, var(--main-dark-blue) 90%);*/
     background-size: 100%;
     min-height: 100vh;
     color: var(--text-primary);
