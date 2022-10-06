@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 
 import {productActions} from "../../store";
 import {Comments} from "../Comments/Comments";
@@ -10,8 +10,6 @@ import "./SingleProduct.css";
 const SingleProduct = ({singleProduct}) => {
 
     const {name, count, imageUrl, size: {width, height}, weight, comments} = singleProduct;
-
-    const {productForUpdate} = useSelector(state => state["productReducer"]);
 
     const dispatch = useDispatch();
 

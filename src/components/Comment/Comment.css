@@ -1,0 +1,23 @@
+.comment_wrap {
+    border: 2px solid var(--text-secondary);
+    border-radius: 25px;
+    padding: 2%;
+}
+
+
+.comment_wrap > img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.comment_date {
+    margin-top: 10px;
+    align-self: flex-end;
+}
+

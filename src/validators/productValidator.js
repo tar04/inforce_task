@@ -24,5 +24,5 @@ export const productValidator = Joi.object({
         'weight.max': 'Weight must be lower than 100000g gram',
         'weight.required': 'Weight required'
     }),
-    image:Joi.any(),
+    image: Joi.any(),
 });

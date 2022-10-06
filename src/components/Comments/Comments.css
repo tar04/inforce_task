@@ -1,0 +1,39 @@
+.comment_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5vh;
+}
+
+.comments_body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.comments_add {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.comments_add input {
+    width: 80%;
+    padding: 5px;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 10px;
+    color: var(--text-secondary);
+}
+
+.comments_add img {
+    width: 40px;
+    cursor: pointer;
+}

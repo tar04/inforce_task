@@ -1,11 +1,11 @@
 import React, {useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
+import {useDispatch, useSelector} from "react-redux";
 
+import {productActions} from "../../store";
 import {productValidator} from "../../validators";
 import "./ProductForm.css";
-import {useDispatch, useSelector} from "react-redux";
-import {productActions} from "../../store";
 
 const ProductForm = ({setModalActive}) => {
 
@@ -13,7 +13,7 @@ const ProductForm = ({setModalActive}) => {
 
     const dispatch = useDispatch();
 
-    const {register, handleSubmit, reset, formState: {errors}, setValue} = useForm({
+    const {register, handleSubmit, formState: {errors}, setValue} = useForm({
         resolver: joiResolver(productValidator), mode: "onTouched"
     });
 
@@ -42,7 +42,8 @@ const ProductForm = ({setModalActive}) => {
     async function send({name, count, weight, height, width}) {
 
         const newProduct = {
-            imageUrl: null, //TODO В даному випадку без ноди не вийде записати файл в БД, оскільки це звичайна папка в проекті
+            //TODO В даному випадку з imageUrl: null без ноди не вийде записати файл в БД, оскільки це звичайна папка в проекті
+            imageUrl: null,
             name,
             count,
             size: {
@@ -54,7 +55,6 @@ const ProductForm = ({setModalActive}) => {
         };
 
         if (productForUpdate) {
-            console.log(productForUpdate.id);
             await dispatch(productActions.updateProduct({
                 newProduct: {
                     ...newProduct,
@@ -62,7 +62,7 @@ const ProductForm = ({setModalActive}) => {
                     imageUrl: productForUpdate.imageUrl,
                     id: productForUpdate.id,
                 }
-            }))
+            }));
         } else {
             await dispatch(productActions.createProduct({newProduct}));
             setValue("name", "");
@@ -98,7 +98,6 @@ const ProductForm = ({setModalActive}) => {
                     <button className="form_button_cancel" onClick={cancel}>Cancel</button>
                 </div>
             </div>
-
         </form>
     );
 };

@@ -27,7 +27,7 @@ const Products = () => {
 
     function deleteProduct() {
         setModalActive(false);
-        dispatch(productActions.deleteProductById({idForDelete}))
+        dispatch(productActions.deleteProductById({idForDelete}));
     }
 
     return (

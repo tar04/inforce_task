@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-
 import {useDispatch} from "react-redux";
+
 import {productActions} from "../../store";
-import "./Menu.css";
 import {Modal} from "../Modal/Modal";
 import {ProductForm} from "../ProductForm/ProductForm";
+import "./Menu.css";
 
 const Menu = () => {
 
@@ -13,7 +13,7 @@ const Menu = () => {
     const [modalActive, setModalActive] = useState(false);
 
     function changeSort(e) {
-        dispatch(productActions.setSortType(e.target.value))
+        dispatch(productActions.setSortType(e.target.value));
     }
 
     return (

@@ -1,4 +1,4 @@
-.header{
+.header {
     height: 10vh;
     width: 100%;
     display: flex;
@@ -8,9 +8,9 @@
     box-shadow: 0 10px 25px 16px var(--main-blue);
 }
 
-.header>.logo{
+.header > .logo {
     position: absolute;
-    top:-20px;
+    top: -20px;
     border-radius: 50%;
     height: 150px;
     width: 150px;
@@ -21,9 +21,10 @@
     box-shadow: 0 0 12px 6px var(--main-gray);
 }
 
-.header>.logo>a{
+.header > .logo > a {
     width: 60%;
 }
-.header>.logo img{
+
+.header > .logo img {
     width: 100%;
 }

@@ -12,7 +12,7 @@ const initialState = {
     singleProductStatus: false,
     productForUpdate: null,
     sortType: "alphabet",
-}
+};
 
 const getAllProducts = createAsyncThunk(
     "productSlice/getAllProducts",
@@ -27,7 +27,7 @@ const getAllProducts = createAsyncThunk(
 );
 
 const getSingleProduct = createAsyncThunk(
-    "productSlice/getAllSingleProduct",
+    "productSlice/getSingleProduct",
     async ({id}, {rejectWithValue}) => {
         try {
             return await productsService.getById(id);
@@ -42,9 +42,9 @@ const deleteProductById = createAsyncThunk(
     async ({idForDelete: id}, {dispatch, rejectWithValue}) => {
         try {
             await productsService.deleteById(id);
-            dispatch(deleteProduct({id}))
+            dispatch(deleteProduct({id}));
         } catch (e) {
-            return rejectWithValue(e.response.data)
+            return rejectWithValue(e.response.data);
         }
     }
 );
@@ -64,8 +64,44 @@ const updateProduct = createAsyncThunk(
             await productsService.updateById(newProduct.id, newProduct);
             dispatch(setSingleProductStatus());
         } catch (e) {
-            return rejectWithValue(e.response.data)
+            return rejectWithValue(e.response.data);
         }
+    }
+);
+
+const deleteComment = createAsyncThunk(
+    "productSlice/deleteComment",
+    async ({commentId, comments}, {dispatch, rejectWithValue, getState}) => {
+        try {
+            const {productReducer: {singleProduct}} = getState();
+            const comments = singleProduct.comments.filter(comment => comment.id !== commentId);
+            await productsService.updateById(singleProduct.id, {...singleProduct, comments});
+            dispatch(setSingleProductStatus());
+        } catch (e) {
+            return rejectWithValue(e.response.data);
+        }
+    }
+);
+
+const addComment = createAsyncThunk(
+    "productSlice/addComment",
+    async ({description, date}, {dispatch, getState}) => {
+        //TODO Та сама функція з компоненти Comments.js, яку не вийшло пофіксити
+
+        // try {
+        //     const {productReducer: {singleProduct, products}} = getState();
+        //     const flat = products.reduce((acc, item) => [...acc, item.comments], []).flat();
+        //     const id = flat.reduce((acc, item) => acc > item.id ? acc : item.id, flat[0].id);
+        //     const comments = singleProduct.comments.concat({id: id + 1, description, date, productId: singleProduct.id})
+        //
+        //     await productsService.updateById(singleProduct.id, {
+        //         ...singleProduct,
+        //         comments
+        //     });
+        //     dispatch(setSingleProductStatus());
+        // } catch (e) {
+        //     console.log(e);
+        // }
     }
 );
 
@@ -82,16 +118,12 @@ const productSlice = createSlice({
         setProductForUpdate: (state, action) => {
             state.productForUpdate = action.payload;
         },
-        resetSingleProductError: (state, action) => {
-            state.singleProductError = null;
-            state.singleProduct = action.payload;
-        },
         setSingleProductStatus: (state) => {
             state.singleProductStatus = !state.singleProductStatus;
         },
         deleteProduct: (state, action) => {
             const {id} = action.payload;
-            state.products = state.products.filter(product => product.id !== id)
+            state.products = state.products.filter(product => product.id !== id);
         },
         sortProducts: (state) => {
             switch (state.sortType) {
@@ -141,7 +173,6 @@ const {
         deleteProduct,
         sortProducts,
         setSortType,
-        resetSingleProductError,
         setSingleProductStatus
     }
 } = productSlice;
@@ -152,10 +183,11 @@ const productActions = {
     updateProduct,
     deleteProductById,
     getSingleProduct,
+    deleteComment,
+    addComment,
     sortProducts,
     setSortType,
     setProductForUpdate,
-    resetSingleProductError
 };
 
 export {
